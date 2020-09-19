@@ -1,6 +1,6 @@
 # AdguardHome Installation Guide
 
-**1.** Download and install AdguardHome:
+**1.1** Download and install AdguardHome:
 
 ```sh
 wget --no-check https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.103.3/AdGuardHome_linux_arm64.tar.gz -O AdGuardHome_linux_arm64.tar.gz
@@ -10,6 +10,12 @@ chmod a+x AdGuardHome
 ./AdGuardHome -s install
 systemctl start AdGuardHome
 systemctl enable AdGuardHome
+```
+
+**1.2** O
+```sh
+wget --no-check https://github.com/rufengsuixing/luci-app-adguardhome/releases/download/1.8-11/luci-app-adguardhome_1.8-11_all.ipk -O luci-app-adguardhome_1.8-11_all.ipk
+opkg install luci-app-adguardhome_1.8-11_all.ipk
 ```
 
 **2.** Open a browser and enter the URL http://192.168.8.1:3000/ to access the AdGuard Home administration page.
