@@ -131,3 +131,23 @@ config dnsmasq
 	list server '8.8.4.4'
 
 ```
+
+```
+root@LPM:~# cat /root/AdGuardHome/AdGuardHome.yaml 
+bind_host: 10.4.2.1
+bind_port: 3000
+...
+web_session_ttl: 720
+dns:
+  bind_host: 10.4.2.1
+  port: 1745
+  statistics_interval: 1
+  querylog_enabled: true
+  querylog_file_enabled: true
+  querylog_interval: 90
+  querylog_size_memory: 1000
+  anonymize_client_ip: false
+  protection_enabled: true
+  blocking_mode: default
+...
+```
