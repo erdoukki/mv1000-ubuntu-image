@@ -3,7 +3,7 @@
 **1.** Download and install AdguardHome:
 
 ```sh
-wget --no-check  https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.99.2/AdGuardHome_linux_arm64.tar.gz
+wget --no-check https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.103.3/AdGuardHome_linux_arm64.tar.gz -O AdGuardHome_linux_arm64.tar.gz
 tar -zxvf AdGuardHome_linux_arm64.tar.gz
 cd AdGuardHome
 chmod a+x AdGuardHome
