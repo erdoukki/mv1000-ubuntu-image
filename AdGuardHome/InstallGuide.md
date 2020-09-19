@@ -12,11 +12,14 @@ systemctl start AdGuardHome
 systemctl enable AdGuardHome
 ```
 
-**1.2** O
+**1.2** Install LUCI Companion APP
 ```sh
 wget --no-check https://github.com/rufengsuixing/luci-app-adguardhome/releases/download/1.8-11/luci-app-adguardhome_1.8-11_all.ipk -O luci-app-adguardhome_1.8-11_all.ipk
 opkg install luci-app-adguardhome_1.8-11_all.ipk
 ```
+
+https://github.com/alexsannikov/adguardhome-filters
+https://raw.githubusercontent.com/alexsannikov/adguardhome-filters/master/porn.txt
 
 **2.** Open a browser and enter the URL http://192.168.8.1:3000/ to access the AdGuard Home administration page.
 
