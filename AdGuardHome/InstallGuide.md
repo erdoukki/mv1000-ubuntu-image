@@ -17,6 +17,22 @@ systemctl enable AdGuardHome
 wget --no-check https://github.com/rufengsuixing/luci-app-adguardhome/releases/download/1.8-11/luci-app-adguardhome_1.8-11_all.ipk -O luci-app-adguardhome_1.8-11_all.ipk
 opkg install luci-app-adguardhome_1.8-11_all.ipk
 ```
+``` /etc/config/AdGuardHome 
+
+config AdGuardHome 'AdGuardHome'
+	option enabled '1'
+	option httpport '3000'
+	option redirect 'none'
+	option configpath '/root/AdGuardHome/AdGuardHome.yaml'
+	option workdir '/root/AdGuardHome'
+	option logfile '/tmp/AdGuardHome.log'
+	option verbose '0'
+	option binpath '/root/AdGuardHome/AdGuardHome'
+	option hostsmd5 '5504bb04bd01cb0e340aee9e2ae065b2'
+	list old_redirect 'none'
+	list old_port '0'
+	list old_enabled '0'
+```
 
 **2.** Open a browser and enter the URL http://192.168.8.1:3000/ to access the AdGuard Home administration page.
 
