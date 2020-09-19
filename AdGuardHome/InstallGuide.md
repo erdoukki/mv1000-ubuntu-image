@@ -107,3 +107,27 @@ https://raw.githubusercontent.com/alexsannikov/adguardhome-filters/master/porn.t
 
 https://forum.openwrt.org/t/howto-running-adguard-home-on-openwrt/51678
 
+```/etc/config/dhcp
+
+config dnsmasq
+	option localise_queries '1'
+	option rebind_protection '1'
+	option rebind_localhost '1'
+	option expandhosts '1'
+	option readethers '1'
+	option nonwildcard '0'
+...
+	list rebind_domain 'onion'
+	option allservers '1'
+	option nonegcache '1'
+	option filterwin2k '1'
+	option confdir '/tmp/dnsmasq.d'
+	option noresolv '1'
+	option port '53'
+#	list server '127.0.0.1#1745'
+	list server '10.4.2.1#1745'
+....
+	list server '/onion/127.0.0.1#9053'
+	list server '8.8.4.4'
+
+```
