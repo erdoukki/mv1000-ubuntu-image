@@ -98,3 +98,5 @@ Query Log
 https://github.com/alexsannikov/adguardhome-filters
 https://raw.githubusercontent.com/alexsannikov/adguardhome-filters/master/porn.txt
 
+https://forum.openwrt.org/t/howto-running-adguard-home-on-openwrt/51678
+
