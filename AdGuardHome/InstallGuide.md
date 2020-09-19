@@ -20,18 +20,25 @@ opkg install luci-app-adguardhome_1.8-11_all.ipk
 ``` /etc/config/AdGuardHome 
 
 config AdGuardHome 'AdGuardHome'
-	option enabled '1'
 	option httpport '3000'
-	option redirect 'none'
 	option configpath '/root/AdGuardHome/AdGuardHome.yaml'
 	option workdir '/root/AdGuardHome'
 	option logfile '/tmp/AdGuardHome.log'
 	option verbose '0'
 	option binpath '/root/AdGuardHome/AdGuardHome'
 	option hostsmd5 '5504bb04bd01cb0e340aee9e2ae065b2'
-	list old_redirect 'none'
-	list old_port '0'
-	list old_enabled '0'
+	option version 'core error'
+	option binmtime '1595611966'
+	option waitonboot '1'
+	option ucitracktest '1'
+	option enabled '1'
+	option upprotect '$binpath $configpath $workdir/data/filters'
+	option backupfile 'filters'
+	option backupwdpath '/root/AdGuardHome'
+	option redirect 'dnsmasq-upstream'
+	list old_redirect 'dnsmasq-upstream'
+	list old_port '1745'
+	list old_enabled '1'
 ```
 
 **2.** Open a browser and enter the URL http://192.168.8.1:3000/ to access the AdGuard Home administration page.
